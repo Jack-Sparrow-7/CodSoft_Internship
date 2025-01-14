@@ -20,7 +20,6 @@ class _HomePageState extends State<HomePage> {
   final _myBox = Hive.box("myBox");
 
   Data data = Data();
-  List foundList = [];
   @override
   void initState() {
     _myBox.get("TaskList") == null ? data.initialData() : data.loadData();
